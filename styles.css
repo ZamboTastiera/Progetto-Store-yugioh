@@ -1,0 +1,322 @@
+
+/* Contenitore per le carte */
+#contenitoreCarte {
+    display: grid; /* Usa una griglia per organizzare le carte */
+    grid-template-columns: repeat(5, 1fr); /* 5 colonne di uguale larghezza */
+    gap: 15px; /* Spazio tra le carte */
+    padding: 20px;
+    background-color: #a88734; /* Sfondo per il contenitore */
+    border-radius: 10px;
+  }
+ 
+  /* Stile per ogni carta */
+  .carta {
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+ 
+  .carta:hover {
+    transform: scale(1.05); /* Effetto ingrandimento al passaggio del mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombra più marcata */
+  }
+ 
+  /* Immagine della carta */
+  .carta img {
+    width: 100%; /* L'immagine si adatta alla larghezza della carta */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+ 
+  /* Titolo della carta */
+  .carta h3 {
+    font-size: 16px;
+    color: #a88734;
+    margin: 10px 0;
+  }
+ 
+  /* Prezzo della carta */
+  .carta p {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+ 
+  /* Pulsante della carta */
+  .carta button {
+    background-color: #000000;
+    color: #a88734;
+    border: #a88734 solid;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+ 
+  .carta button:hover {
+    background-color: #725d27;
+  }
+ 
+.controlli-paginazione {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+ 
+.controlli-paginazione button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #007BFF;
+    background-color: white;
+    color: #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+ 
+.controlli-paginazione button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+ 
+.controlli-paginazione button.attivo {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.modalBordo{
+    border: #a88734 4px solid;;
+}
+ 
+/* Stile per il modal */
+#modalDettagli {
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    background-color: #121212;
+    padding: 20px;
+    border: #ffffff 4px solid;;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    max-width: 400px;
+    width: 80%;
+    overflow-y: auto; /* Aggiunto per lo scroll se il contenuto è lungo */
+}
+ 
+/* Stile per il titolo */
+#modalDettagli h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+ 
+/* Stile per le immagini */
+#modalDettagli img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+ 
+/* Stile per i paragrafi */
+#modalDettagli p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+ 
+/* Stile per il pulsante di chiusura */
+#modalDettagli button {
+    background-color: #000000; /* Colore blu */
+    color: #a88734;
+    border: #a88734 3px solid;
+    border-radius: 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+ 
+#modalDettagli button:hover {
+    background-color: #725d27; /* Colore blu scuro al passaggio del mouse */
+}
+ 
+#sezioneGrafico {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+ 
+#graficoCarte {
+    max-width: 100%;
+    height: auto;
+}
+ 
+.item-carrello .info-carta {
+    flex: 1;
+}
+ 
+.item-carrello .azioni-carta {
+    margin-left: 10px;
+}
+
+.paginazione {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+}
+
+.paginazione button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #a88734;
+    color: #111;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.paginazione button:hover {
+    background-color: #725d27;
+}
+
+.paginazione button.attivo {
+    background-color: #a88734;
+    color: white;
+}
+
+.paginazione button:disabled {
+    background-color: #e7e7e7;
+    color: #b2b2b2;
+    cursor: not-allowed;
+}
+
+#sezioneGrafico {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+#graficoCarte {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: #121212; 
+    color: #ffffff; 
+}
+
+header h1 {
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+h2 a, h3 a {
+    display: inline-block; 
+    background-color: #000000; 
+    color: #a88734; 
+    border-color: #a88734;
+    padding: 10px 15px; 
+    border: #a88734 solid;
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+}
+
+h2 a:hover, h3 a:hover {
+    background-color: #725d27; 
+}
+
+input{
+    border: #a88734 solid;
+}
+
+.titolo{
+    font-family: 'Permanent Marker';
+    color: #a88734;
+    text-align: center;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.boxricercacarte{
+    float: right;
+    width: 8%;
+    height: 3%;
+    border: #a88734 4px solid;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    #contenitoreCarte {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonne su schermi più piccoli */
+    }
+
+    #ricercaCarte {
+        width: 90%; /* Aumenta la larghezza su schermi più piccoli */
+        float: none; /* Rimuovi il float per centrare */
+        margin: 0 auto; /* Centra il campo di ricerca */
+    }
+}
+
+@media (max-width: 480px) {
+    #contenitoreCarte {
+        grid-template-columns: 1fr; /* 1 colonna su schermi molto piccoli */
+    }
+
+    header h1 {
+        font-size: 24px; /* Riduci la dimensione del font per il titolo */
+    }
+
+    #ricercaCarte {
+        width: 95%; /* Aumenta ulteriormente la larghezza su schermi molto piccoli */
+    }
+}
+
+.grassettoInfo{
+    color: #a88734;
+}
+
+.normaleInfo{
+    color: #ffffff;
+}
+
+.bottonerimuovicarrello{
+    background-color: #000000;
+    border: #a88734 2px solid;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    transition-duration: 0.3s;
+}
+
+.bottonerimuovicarrello:hover{
+    background: #725d27;
+}
+
+.bottoneRiepilogo{
+    background-color: #000000;
+    border: #a88734 2px solid;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    transition-duration: 0.3s;
+}
+
+.bottoneRiepilogo:hover{
+    background: #725d27;
+}
